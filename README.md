@@ -12,7 +12,8 @@ parcel src/index.html
 yarn build
 ```
 
-# node运行本地服务
+# node 运行本地服务
+
 ```
 node server.js 8088
 ```
