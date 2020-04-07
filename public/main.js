@@ -1,6 +1,6 @@
 getCss.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("GET", "/style.css");
+  re.open("GET", "https://linxueqing.github.io/js-ajax-dome/public/style.css");
   re.onreadystatechange = () => {
     // 下载完成，但是不一定成功，成功是2xx，失败是3xx 4xx 5xx
     if (re.readyState === 4) {
@@ -21,7 +21,7 @@ getCss.onclick = () => {
 };
 getJS.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("GET", "/2.js");
+  re.open("GET", "https://linxueqing.github.io/js-ajax-dome/public/2.js");
   re.onload = () => {
     const script = document.createElement("script");
     script.innerHTML = re.response;
@@ -34,7 +34,7 @@ getJS.onclick = () => {
 };
 getHTML.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("get", "/3.html");
+  re.open("get", "https://linxueqing.github.io/js-ajax-dome/public/3.html");
   re.onload = () => {
     const div = document.createElement("div");
     div.innerHTML = re.response;
@@ -47,7 +47,7 @@ getHTML.onclick = () => {
 };
 getXML.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("get", "./4.xml");
+  re.open("get", "https://linxueqing.github.io/js-ajax-dome/public/4.xml");
   re.onreadystatechange = () => {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
       const dom = re.responseXML;
@@ -59,7 +59,7 @@ getXML.onclick = () => {
 };
 getJSON.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("get", "../5.json");
+  re.open("get", "https://linxueqing.github.io/js-ajax-dome/public/5.json");
   re.onreadystatechange = () => {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
       const object = JSON.parse(re.response);
@@ -72,7 +72,7 @@ getJSON.onclick = () => {
 let n = 1;
 getPage.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("get", `/page${n + 1}`);
+  re.open("get", `https://linxueqing.github.io/js-ajax-dome/db/page${n + 1}`);
   re.onreadystatechange = () => {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
       const arr = JSON.parse(re.response);

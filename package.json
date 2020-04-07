@@ -5,10 +5,10 @@
   "devDependencies": {
     "cssnano": "^4.1.10"
   },
-  "name": "nav-1",
+  "name": "js-ajax-dome",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:FrankFang/nav-1.git",
-  "author": "frankfang <frankfang1990@gmail.com>",
+  "repository": "git@github.com:linxueqing/js-ajax-dome.git",
+  "author": "linxueqing <lin2010hi@163.com>",
   "license": "MIT"
 }
