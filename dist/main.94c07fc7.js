@@ -178,7 +178,7 @@ getHTML.onclick = function () {
 
 getXML.onclick = function () {
   var re = new XMLHttpRequest();
-  re.open("get", "/4.xml");
+  re.open("get", "./4.xml");
 
   re.onreadystatechange = function () {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
@@ -193,7 +193,7 @@ getXML.onclick = function () {
 
 getJSON.onclick = function () {
   var re = new XMLHttpRequest();
-  re.open("get", "/5.json");
+  re.open("get", "../5.json");
 
   re.onreadystatechange = function () {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
@@ -210,7 +210,7 @@ var n = 1;
 
 getPage.onclick = function () {
   var re = new XMLHttpRequest();
-  re.open("get", "page".concat(n + 1));
+  re.open("get", "/page".concat(n + 1));
 
   re.onreadystatechange = function () {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
@@ -228,4 +228,4 @@ getPage.onclick = function () {
   re.send();
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.6296b996.js.map
+//# sourceMappingURL=main.94c07fc7.js.map

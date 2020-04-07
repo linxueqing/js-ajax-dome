@@ -47,7 +47,7 @@ getHTML.onclick = () => {
 };
 getXML.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("get", "/4.xml");
+  re.open("get", "./4.xml");
   re.onreadystatechange = () => {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
       const dom = re.responseXML;
@@ -59,7 +59,7 @@ getXML.onclick = () => {
 };
 getJSON.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("get", "/5.json");
+  re.open("get", "../5.json");
   re.onreadystatechange = () => {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
       const object = JSON.parse(re.response);
@@ -72,7 +72,7 @@ getJSON.onclick = () => {
 let n = 1;
 getPage.onclick = () => {
   const re = new XMLHttpRequest();
-  re.open("get", `page${n + 1}`);
+  re.open("get", `/page${n + 1}`);
   re.onreadystatechange = () => {
     if (re.readyState === 4 && re.status >= 200 && re.status < 300) {
       const arr = JSON.parse(re.response);
